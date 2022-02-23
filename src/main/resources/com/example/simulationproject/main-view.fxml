@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulationproject.MainController">
+   <children>
+      <VBox alignment="CENTER" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" spacing="20.0">
+          <padding>
+              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </padding>
+      </VBox>
+      <BorderPane prefWidth="200.0" style="-fx-background-color: #2B2B2B;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <VBox prefWidth="400.0" style="-fx-background-color: #3F3F3F;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label id="txTitle" fx:id="txTitle" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="500.0" style="-fx-font-family: Montserrat; -fx-font-weight: bold;" text="Restoring Unsigned Integer" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" prefWidth="500.0" style="-fx-font-family: montserrat;" text="Aboy | Abaca | Campos | Chavez | Niu | Sibug | Tan" textFill="#faf9f9">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="26.0" prefWidth="354.0" style="-fx-font-family: montserrat;" text="Input M (In Binary)" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField id="tfInput" fx:id="tfM" prefHeight="26.0" prefWidth="0.0" style="-fx-border-width: 1; -fx-border-color: #132423;">
+                     <VBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label prefHeight="26.0" prefWidth="354.0" style="-fx-font-family: montserrat;" text="Input Q (In Binary)" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="25.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField id="tfInput" fx:id="tfQ" prefHeight="26.0" prefWidth="0.0" style="-fx-border-width: 1; -fx-border-color: #132423;">
+                     <VBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label fx:id="txError" alignment="CENTER" prefHeight="27.0" prefWidth="504.0" style="-fx-font-family: montserrat;" textFill="#df1515">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label style="-fx-font-family: montserrat;" text="Output A" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="25.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField id="tfInput" fx:id="tfOutputA" disable="true" prefHeight="25.0" prefWidth="277.0" style="-fx-border-width: 10px;">
+                     <VBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label style="-fx-font-family: montserrat;" text="Output Q" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField id="tfInput" fx:id="tfOutputQ" disable="true" prefHeight="25.0" prefWidth="256.0" style="-fx-border-width: 10px;">
+                     <VBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                     </VBox.margin></TextField>
+                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="499.0">
+                     <children>
+                        <Button id="btnCalculate" fx:id="btnCalculate" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#submit" prefHeight="46.0" prefWidth="189.0" style="-fx-border-radius: 39px; -fx-background-radius: 39px; -fx-background-color: #A6A6A6; -fx-font-family: Montserrat; -fx-font-size: 23px;" text="Calculate" textFill="#4e4e4e">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label prefHeight="18.0" prefWidth="157.0" style="-fx-font-family: montserrat;" text="Steps" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="25.0" right="25.0" top="25.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ScrollPane hbarPolicy="NEVER" pannable="true" prefHeight="200.0" prefWidth="200.0" style="-: black;">
+                    <content>
+                      <AnchorPane>
+                           <children>
+                              <VBox prefWidth="500.0">
+                                 <children>
+                                    <Label id="txOutput" fx:id="txSteps" alignment="TOP_LEFT" contentDisplay="CENTER" prefWidth="500.0" style="-fx-font-family: montserrat; -fx-font-size: 15; -fx-color: #3F3F3F;" textFill="#3f3f3f">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                     <VBox.margin>
+                        <Insets bottom="25.0" left="25.0" right="25.0" />
+                     </VBox.margin>
+                  </ScrollPane>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+               </BorderPane.margin>
+            </VBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
